@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv= "X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Employee List</title>
+  
+</head>
+
+<body>
+
+
+
+
+        <h1 class=font-bold> New Hire Entry Form</h1>
+        <br>
+    
+        <form >
+          <div class ="justify-items-start"><p>Employee Name:</p>
+            <input class="width-10/12" type="text" border-black id =box1>
+         <br>
+            <button onclick="getElementById('box1').innerHTML=adRow()">Submit</button></div>
+
+            
+          <br>  
+            <div class="justify-items-start"> <p>Employee ID:</p>
+              <input class="width-10/12" type="text" border-black id =box2>
+          <br>
+              <button onclick="getElementById('box2').innerHTML=adRow()">Submit</button></div>
+            
+           
+                <br>
+                
+                <div class="justify-items-start">  <p>Salary:</p>
+                <input class="width-10/12"  type="text" border-black id =box3 >
+                <br>
+                <button onclick="getElementById('box3').innerHTML=adRow()">Submit</button></div>
+                
+              
+           
+        </form>
+
+
+<br>
+
+
+<br>
+
+        
+
+
+<table class ="min-w-full shadow-md rounded border-color-black "id = list>
+    <thead class="bg-gray-50">
+      <tr class="px-12 py-12">
+        <th class="px-12 text-left font-bold">Employee Name</th>
+        <th class="p-4 text-left font-bold">Employee ID</th>
+        <th class="p-4 text-left font-bold">Pay</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-300 ">
+      <tr class="px-6 py-4">
+        <td class="p-4">Lanna Jones</td>
+        <td class="p-4">4502</td>
+        <td class="p-4">850</td>
+      </tr >
+      <tr class="px-6 py-4" >
+        <td class="p-4">Ronnie Smith</td>
+        <td class="p-4">4503</td>
+        <td class="p-4">900</td>
+      </tr>
+      <tr class="px-6 py-4">
+        <td class="p-4">Mark Williams</td>
+        <td class="p-4">4504</td>
+        <td class="p-4">720</td>
+      </tr>
+      <tr class="px-6 py-4">
+        <td class="p-4">Alba Walker</td>
+        <td class="p-4">4505</td>
+        <td class="p-4">1000</td>
+      </tr>
+      <tr class="px-6 py-4"> 
+        <td class="p-4">Robert Jones</td>
+        <td class="p-4">4506</td>
+        <td class="p-4">600</td>
+      </tr>
+      <tr class="px-6 py-4">
+        <td class="p-4">Nancy Smith</td>
+        <td class="p-4">4507</td>
+        <td class="p-4">1100</td>
+      </tr>
+    </tbody>
+  </table>
+
+<P> </P>
+
+
+</form>
+ 
+  <script>
+
+
+
+
+            
+           
+            function addRow()
+            {
+                
+                eName = document.getElementById("box1").value;
+                    eID = document.getElementById("box2").value;
+                    eSal = document.getElementById("box3").value;
+            
+             
+               newRow = document.getElementByID('list').insertRow(),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    cell1.innerHTML = eName;
+                    cell2.innerHTML = eID;
+                    cell3.innerHTML = eSal;
+             
+                table.l
+            }
+            
+            
+
+
+            function addHtmlTableRow()
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(!checkEmptyInput()){
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    fname = document.getElementById("fname").value,
+                    lname = document.getElementById("lname").value,
+                    age = document.getElementById("age").value;
+            
+                cell1.innerHTML = fname;
+                cell2.innerHTML = lname;
+                cell3.innerHTML = age;
+                // call the function to set the event to the new row
+                selectedRowToInput();
+            }
+            }
+
+             </script>
+
+            </head>
+  
+</body>
+</html>
+
+
+
+
+
+
